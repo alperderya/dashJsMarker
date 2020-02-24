@@ -1,0 +1,74 @@
+<html>
+<head>
+  <!--  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+
+    <script src="../../contrib/akamai/controlbar/ControlBar.js"></script>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+
+
+
+    <link href="//vjs.zencdn.net/7.3.0/video-js.min.css" rel="stylesheet">
+    <link href="/css/videojs.markers.extra.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+    <!-- <script src ="/js/videojs-markers.min.js"></script> -->
+    <script src ="/js/videojs-marker.js"></script>
+    <script src="/js/appVideo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+    <script type="text/javascript">
+		function Generator() {};
+		
+		Generator.prototype.rand =  Math.floor(Math.random() * 26) + Date.now();
+		
+		Generator.prototype.getId = function() {
+		   return this.rand++;
+		};
+		var idGen =new Generator();
+	</script>
+
+    <style>
+        video {
+            width: 9600px;
+            height: 540px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <video
+            id="my-player"
+            class="video-js"
+            controls
+            preload="auto"
+            data-id="{{videoId}}"
+            width="960" height="540"
+            >
+        <source src="{{videoUrl}}" type="{{videoType}}"></source>
+
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">
+                supports HTML5 video
+            </a>
+        </p>
+    </video>
+    <form action="/uploadFile" enctype="multipart/form-data" method="post" hidden="true">
+
+        <input type="file" name="file">
+        <button type="submit" name="fileUploadButton">Upload Video Description File</button>
+
+
+
+    </form>
+    <br>
+    <div style="color:green;font-size:large; background-color: black; width:20%;"> GREEN IS BEST! </div><br/>
+    <div style="color:yellow;font-size:large; background-color: black; width:20%;"> YOU SHOULD SEE YELLOW! </div><br/>
+    <div style="color:orange;font-size:large; background-color: black; width:20%;"> YOU CAN SEE ORANGE IF YOU HAVE TIME! </div><br/>
+    <div style="color:red; font-size:large; background-color: black; width:20%;"> DO NOT WASTE YOUR TIME! </div><br/>
+</div>
+
+
+</body>
+</html>
