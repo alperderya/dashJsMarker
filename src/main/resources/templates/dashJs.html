@@ -18,12 +18,12 @@
         }
     </style>
 </head>
-<body onload="startVideo()">
+<body onload="startVideo('http://dash.akamaized.net/dash264/TestCases/5a/1/manifest.mpd', true)">
 
 <div class="dash-video-player ">
-    <!-- HTML structure needed for the ControlBar -->
+    <!-- HTML structure needed for the ControlBar -->  
     <div class="videoContainer" id="videoContainer">
-        <video preload="auto" autoplay="true"> </video>
+        <video id="myVideo" preload="auto" autoplay="true"> </video>
         <div id="videoController" class="video-controller unselectable">
             <div id="playPauseBtn" class="btn-play-pause" title="Play/Pause">
                 <span id="iconPlayPause" class="icon-play"></span>
@@ -52,6 +52,10 @@
                     <div id="seekbar-play" class="seekbar seekbar-play"></div>
                 </div>
             </div>
+<!--             <div id="thumbnail-container" class="thumbnail-container"> Thumbnails will be rendered here
+               <div id="thumbnail-elem" class="thumbnail-elem"></div>
+               <div id="thumbnail-time-label" class="thumbnail-time-label"></div>
+           </div> -->
         </div>
     </div>
 </div>

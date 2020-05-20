@@ -293,8 +293,8 @@ input[type="range"]::-ms-thumb {
 
 .seekbar-complete {
     width: 100%;
-    height: 7px;
-    margin-top: 16px;
+    height: 18px;
+    margin-top: 10px;
     background: #999a99;
     position: relative;
     overflow: hidden;
@@ -305,7 +305,7 @@ input[type="range"]::-ms-thumb {
     left: 0px;
     top: 0px;
     width: 0%;
-    height: 7px;
+    height: 18px;
     background: lightgray;
 }
 
@@ -314,6 +314,6 @@ input[type="range"]::-ms-thumb {
     left: 0px;
     top: 0px;
     width: 0%;
-    height: 7px;
+    height: 18px;
     background: rgb(0, 150, 215);
 }
